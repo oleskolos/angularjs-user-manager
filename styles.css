@@ -1,4 +1,4 @@
-.user-list { padding: 20px; }
+/*.user-list { padding: 20px; }
 .user-list__title { font-size: 24px; margin-bottom: 10px; }
 .user-list__add-button { display: inline-block; margin-bottom: 10px; }
 .user-list__items { list-style: none; padding: 0; }
@@ -23,5 +23,202 @@
   .error h2 {
     font-size: 32px;
     color: crimson;
-  }
+  }*/
+
+  /* ========= Base ========= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+a {
+  color: #4a5fc1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* ========= Layout ========= */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app__content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ========= User List ========= */
+.user-list__title {
+  margin-bottom: 20px;
+}
+
+.user-list__add-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #4a5fc1;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.user-list__add-button:hover {
+  background-color: #3a4fb0;
+}
+
+.user-list__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-list__name {
+  font-weight: 500;
+}
+
+.user-list__actions a,
+.user-list__actions button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #4a5fc1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-list__btn--delete {
+  color: crimson;
+}
+
+/* ========= User View ========= */
+.user-view__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-view__details li {
+  margin-bottom: 6px;
+}
+
+.user-view__btn {
+  margin-right: 10px;
+  background: #4a5fc1;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* ========= User Form ========= */
+.user-form__field {
+  margin-bottom: 15px;
+}
+
+.user-form__field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.user-form__field input,
+.user-form__field select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.user-form__error {
+  color: crimson;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.user-form__buttons {
+  margin-top: 20px;
+}
+
+.user-form__buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.user-form__buttons button[type="submit"] {
+  background-color: #4a5fc1;
+  color: white;
+}
+
+.user-form__buttons button[type="button"] {
+  background-color: #eee;
+}
+
+.user-form__server-error {
+  margin-top: 10px;
+  color: crimson;
+}
+
+/* ========= Errors ========= */
+.error {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.error h2 {
+  font-size: 32px;
+  color: crimson;
+}
+
+.error a {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.user-view__buttons {
+  margin-top: 20px;
+}
+
+.user-view__btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.user-view__btn--back {
+  background-color: #888;
+}
+
   
