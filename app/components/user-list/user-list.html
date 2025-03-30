@@ -1,0 +1,16 @@
+<div class="user-list">
+    <h2 class="user-list__title">Users</h2>
+    <a href="#!/users/edit" class="user-list__add-button">+ Add User</a>
+  
+    <ul class="user-list__items">
+      <li class="user-list__item" ng-repeat="user in users">
+        <span class="user-list__name">{{ user.username }}</span>
+        <div class="user-list__actions">
+          <a href="#!/users/view/{{ user.id }}" class="user-list__btn">View</a>
+          <a href="#!/users/edit/{{ user.id }}" class="user-list__btn">Edit</a>
+          <button ng-click="deleteUser(user.id)" class="user-list__btn user-list__btn--delete">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

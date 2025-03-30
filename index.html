@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="userApp">
+<head>
+  <meta charset="UTF-8">
+  <title>User Manager</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="app__header">
+      <h1>User Manager</h1>
+    </header>
+
+    <main ng-view class="app__content"></main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app/app.js"></script>
+  <script src="app/routes.js"></script>
+  <script src="app/services/userService.js"></script>
+  <script src="app/components/user-list/user-list.controller.js"></script>
+  <script src="app/components/user-view/user-view.controller.js"></script>
+  <script src="app/components/user-form/user-form.controller.js"></script>
+  <script src="app/directives/userValidation.js"></script>
+</body>
+</html>

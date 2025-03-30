@@ -1,0 +1,55 @@
+<div class="user-form">
+    <h2 class="user-form__title">{{ user.id ? 'Edit' : 'Add' }} User</h2>
+  
+    <form name="userForm" ng-submit="save(userForm)" novalidate>
+  
+      <div class="user-form__field">
+        <label>Username</label>
+        <input type="text" name="username" ng-model="user.username" required user-validation />
+        <div class="user-form__error" ng-show="userForm.username.$error.required">Required</div>
+        <div class="user-form__error" ng-show="userForm.username.$error.uniqueUsername">Already taken</div>
+      </div>
+  
+      <div class="user-form__field">
+        <label>First Name</label>
+        <input type="text" name="first_name" ng-model="user.first_name" required />
+      </div>
+  
+      <div class="user-form__field">
+        <label>Last Name</label>
+        <input type="text" name="last_name" ng-model="user.last_name" required />
+      </div>
+  
+      <div class="user-form__field">
+        <label>Email</label>
+        <input type="email" name="email" ng-model="user.email" required user-validation />
+        <div class="user-form__error" ng-show="userForm.email.$error.emailValid">Invalid email</div>
+      </div>
+  
+      <div class="user-form__field">
+        <label>Password</label>
+        <input type="password" name="password" ng-model="user.password" ng-required="!user.id" user-validation />
+        <div class="user-form__error" ng-show="userForm.password.$error.passwordStrength">
+          Must be at least 8 characters, include a letter and a number
+        </div>
+      </div>
+  
+      <div class="user-form__field">
+        <label>User Type</label>
+        <select name="user_type" ng-model="user.user_type" required>
+          <option value="Admin">Admin</option>
+          <option value="Driver">Driver</option>
+        </select>
+      </div>
+  
+      <div class="user-form__buttons">
+        <button type="submit" ng-disabled="userForm.$invalid">Save</button>
+        <button type="button" ng-click="cancel()">Cancel</button>
+      </div>
+  
+      <div class="user-form__server-error" ng-if="error">
+        <span ng-repeat="(key, val) in error">{{ key }}: {{ val }}</span>
+      </div>
+    </form>
+  </div>
+  

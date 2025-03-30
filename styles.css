@@ -1,0 +1,27 @@
+.user-list { padding: 20px; }
+.user-list__title { font-size: 24px; margin-bottom: 10px; }
+.user-list__add-button { display: inline-block; margin-bottom: 10px; }
+.user-list__items { list-style: none; padding: 0; }
+.user-list__item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.user-list__btn { margin-left: 5px; }
+.user-list__btn--delete { color: red; }
+.user-form__field { margin-bottom: 15px; }
+.user-form__error { color: red; font-size: 12px; }
+.user-form__buttons button { margin-right: 10px; }
+.user-view__details {
+    list-style: none;
+    padding: 0;
+  }
+  .user-view__btn {
+    margin-right: 10px;
+  }
+  
+  .error {
+    text-align: center;
+    padding: 40px;
+  }
+  .error h2 {
+    font-size: 32px;
+    color: crimson;
+  }
+  
